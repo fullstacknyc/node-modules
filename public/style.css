@@ -1,0 +1,173 @@
+body {
+    font-family: 'VT323', monospace;
+    background-color: #0f0f0f;
+    color: #ffffff; /* Change text color to white */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundPulse 5s infinite alternate;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.3)), url('holographic-bg.gif'); /* Add holographic background */
+    background-size: cover;
+}
+
+@keyframes backgroundPulse {
+    0% { background-color: #0f0f0f; }
+    100% { background-color: #121212; }
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid #ffffff; /* Change border color to white */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Change shadow to white */
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+#screen {
+    padding: 10px;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Change shadow to white */
+}
+
+.menu-item {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff; /* Change text color to white */
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ffffff; /* Change border to white */
+    border-radius: 10px;
+    margin: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.3); /* Change hover effect */
+    transform: translateY(-2px);
+}
+
+.menu-item.active {
+    background: #ffffff; /* Change active background to white */
+    color: black; /* Change active text color to black */
+    transform: scale(1.05);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #ffffff; /* Change list item border to white */
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.1); /* Change hover effect */
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+button {
+    background-color: #444;
+    color: #ffffff; /* Change button text to white */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ffffff; /* Change button hover background to white */
+    color: black; /* Change button hover text to black */
+    transform: translateY(-2px);
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ffffff; /* Change input border to white */
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #ffffff; /* Change input text to white */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+    height: 150px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #cccccc; /* Change focus border color */
+    box-shadow: 0 0 5px rgba(204, 204, 204, 0.5); /* Change focus shadow */
+}
+
+.event {
+    background: rgba(255, 255, 255, 0.2); /* Change event background to white */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ffffff; /* Change event border to white */
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.event:hover {
+    background: rgba(255, 255, 255, 0.4); /* Change event hover background */
+}
+
+.journal-entry {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff; /* Change journal entry border to white */
+}
+
+.journal-buttons {
+    margin-top: 5px;
+}
+
+#journal-input-container {
+    margin-bottom: 20px;
+}
+
+input[type="datetime-local"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ffffff; /* Change datetime input border to white */
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #ffffff; /* Change datetime input text to white */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIP-BOY 3000</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="terminal">
+        <div id="screen">
+            <div id="header">
+                <h1>PIP-BOY 3000</h1>
+                <p>ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</p>
+            </div>
+            <div id="content">
+                <div id="menu">
+                    <div id="todo-tab" class="menu-item active">> TO-DO LIST</div>
+                    <div id="journal-tab" class="menu-item">> JOURNAL</div>
+                    <div id="scheduler-tab" class="menu-item">> SCHEDULER</div>
+                    <div id="backup-tab" class="menu-item">> BACKUP DATA</div>
+                </div>
+                <div id="display">
+                    <div id="todo-section" class="tab-content active">
+                        <h2>> TO-DO LIST</h2>
+                        <div id="todo-input-container">
+                            <input type="text" id="todo-input" placeholder="Enter a new task">
+                            <button onclick="addTodo()">ADD</button>
+                        </div>
+                        <ul id="todo-list"></ul>
+                    </div>
+                    <div id="journal-section" class="tab-content">
+                        <textarea id="journal" placeholder="Write your journal entry here..."></textarea>
+                        <input type="datetime-local" id="journal-datetime" />
+                        <button onclick="saveJournal()">Save Entry</button>
+                        <h2>Journal Entries</h2>
+                        <div id="journal-entries"></div>
+                    </div>
+                    <div id="scheduler-section" class="tab-content">
+                        <h2>> DYNAMIC SCHEDULER</h2>
+                        <div id="event-input-container">
+                            <input type="datetime-local" id="event-datetime">
+                            <input type="text" id="event-description" placeholder="Event description">
+                            <button onclick="addOrEditEvent()">ADD/EDIT EVENT</button>
+                        </div>
+                        <h3>> CURRENT EVENTS</h3>
+                        <div id="event-list"></div>
+                    </div>
+                    <div id="backup-section" class="tab-content">
+                        <h2>> BACKUP & RESTORE</h2>
+                        <button onclick="downloadBackup()">DOWNLOAD BACKUP</button>
+                        <input type="file" id="upload-backup" accept=".json">
+                        <button onclick="processUploadedBackup()">UPLOAD BACKUP</button>
+                        <div id="upload-feedback" style="color: red; margin-top: 10px;"></div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
